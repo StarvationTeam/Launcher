@@ -2,7 +2,7 @@
 <Servers>
 	<ServerGroup Name="StarvationMod" Logo="https://i.imgur.com/qYDjmkL.jpg" Description="Starvation Mod">
 		<Server Name="StarvationMod16" Logo="">
-			<Description>Starvation for Alpha 16 
+			<Description>Starvation for Alpha 16 !!!UPDATED TO A16.4!!!
 STARVATION is being developed as a modification to tfp's 7 DAYS TO DIE. 
 Starvation adds a higher level of difficulty, challenge, realism, and fun to the original game.
 
@@ -21,7 +21,7 @@ By downloading Starvation Mod, you agree that:
 			<Address></Address>					
 			<Port></Port>	
 			<!--- end of optional -->
-			<Version>alpha16.3</Version>
+			<Version>alpha16.4</Version>
 			<WebSite>http://starvationteam.com/</WebSite>
 			<RSS>https://github.com/StarvationTeam/StarvationMod/commits/master.atom</RSS>
 			<ReleaseNotes>https://7daystodie.com/forums/showthread.php?49819-WIP-STARVATION-by-SDX-team</ReleaseNotes>
