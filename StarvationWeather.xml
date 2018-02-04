@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Starvation weather configuration file
+During a season, the configured weather effect (rain, snow) will be started / stopped according to config,
+in game intervals between 10 and 90 ingame minutes (for 60 minutes days)
+For each season you can configure:
+    DayStart (1:365): exclusive first day of the season. Integer.
+    DayEnd (1:365): inclusive last day of the sason. Integer.
+    Type (1:5): season type. 0=Vanilla, 1=Rare Rain, 2=Common Rain, 3=Snow (floor snow can dry out between snowfall periods), 4=Common Snow, 5=Heavy Snow. Integer.
+    StartChance (1:100): the chance to start the season weather effect if its not already running (rain or snow). Integer.
+    EndChance (1:100): the chance to stop the season weather effect if its already running. Integer.
+    MinEffect (0:1): the minimum intensity for the weather effect. Real.
+    MaxEffect (0:1): the maximum intensity for the weather effect. Real.
+    TempModifier (-100:100): the temperature modifier for the season. Integer.
+    DryChance (0:100): the chance for the floor snow to dry out between snowfall events -->
+<Starvation>
+    <Options>
+        <Option Name="Weather" Enable="true" />
+    </Options>
+    <Seasons>
+      <Season>
+          <!-- starts raining occationally, with no impact on temp -->
+          <Season Param="DayStart" Value="60" />
+          <Season Param="DayEnd" Value="90" />
+          <Season Param="Type" Value="1" />
+          <Season Param="StartChance" Value="5" />
+          <Season Param="EndChance" Value="90" />
+          <Season Param="MinEffect" Value="0.1" />
+          <Season Param="MaxEffect" Value="0.3" />
+          <Season Param="TempModifier" Value="0" />
+          <Season Param="DryChance" Value="0" />
+      </Season>
+      <Season>
+          <!-- starts raining more often, with small impact on temp -->
+          <Season Param="DayStart" Value="90" />
+          <Season Param="DayEnd" Value="120" />
+          <Season Param="Type" Value="2" />
+          <Season Param="StartChance" Value="15" />
+          <Season Param="EndChance" Value="80" />
+          <Season Param="MinEffect" Value="0.3" />
+          <Season Param="MaxEffect" Value="1" />
+          <Season Param="TempModifier" Value="-3" />
+          <Season Param="DryChance" Value="0" />
+      </Season>
+      <Season>
+          <!-- starts snowing on ocation, with small impact on temp -->
+          <!-- snow will sometimes dry out -->
+          <Season Param="DayStart" Value="120" />
+          <Season Param="DayEnd" Value="150" />
+          <Season Param="Type" Value="3" />
+          <Season Param="StartChance" Value="15" />
+          <Season Param="EndChance" Value="80" />
+          <Season Param="MinEffect" Value="0.1" />
+          <Season Param="MaxEffect" Value="0.4" />
+          <Season Param="TempModifier" Value="-5" />
+          <Season Param="DryChance" Value="40" />
+      </Season>
+      <Season>
+          <!-- starts snowing more often, with medium impact on temp -->
+          <!-- snow will never dry out -->
+          <Season Param="DayStart" Value="150" />
+          <Season Param="DayEnd" Value="180" />
+          <Season Param="Type" Value="4" />
+          <Season Param="StartChance" Value="25" />
+          <Season Param="EndChance" Value="70" />
+          <Season Param="MinEffect" Value="0.4" />
+          <Season Param="MaxEffect" Value="0.6" />
+          <Season Param="TempModifier" Value="-10" />
+          <Season Param="DryChance" Value="0" />
+      </Season>
+      <Season>
+          <!-- heavy snowing, heavy temp impact -->
+          <!-- snow will never dry out -->
+          <Season Param="DayStart" Value="180" />
+          <Season Param="DayEnd" Value="210" />
+          <Season Param="Type" Value="5" />
+          <Season Param="StartChance" Value="60" />
+          <Season Param="EndChance" Value="50" />
+          <Season Param="MinEffect" Value="0.6" />
+          <Season Param="MaxEffect" Value="1" />
+          <Season Param="TempModifier" Value="-13" />
+          <Season Param="DryChance" Value="0" />
+      </Season>
+      <Season>
+          <!-- decrease in snowing intensity and frequency, some temp impact -->
+          <!-- snow will dry out on ocation -->
+          <Season Param="DayStart" Value="210" />
+          <Season Param="DayEnd" Value="225" />
+          <Season Param="Type" Value="3" />
+          <Season Param="StartChance" Value="20" />
+          <Season Param="EndChance" Value="70" />
+          <Season Param="MinEffect" Value="0.2" />
+          <Season Param="MaxEffect" Value="0.4" />
+          <Season Param="TempModifier" Value="-8" />
+          <Season Param="DryChance" Value="15" />
+      </Season>
+      <Season>
+          <!-- snowing is now rare, medium to low temp impact -->
+          <!-- snow will dry out sometimes -->
+          <Season Param="DayStart" Value="225" />
+          <Season Param="DayEnd" Value="250" />
+          <Season Param="Type" Value="3" />
+          <Season Param="StartChance" Value="5" />
+          <Season Param="EndChance" Value="80" />
+          <Season Param="MinEffect" Value="0.1" />
+          <Season Param="MaxEffect" Value="0.3" />
+          <Season Param="TempModifier" Value="-6" />
+          <Season Param="DryChance" Value="40" />
+      </Season>
+    </Seasons>
+</Starvation>
