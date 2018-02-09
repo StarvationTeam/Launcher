@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Starvation weather configuration file
 During a season, the configured weather effect (rain, snow) will be started / stopped according to config,
-in game intervals between 10 and 90 ingame minutes (for 60 minutes days)
+in game intervals between 10 and 90 ingame minutes (for 60 minutes days).
+You can have as many seasons as you want.
 For each season you can configure:
-    DayStart (1:365): exclusive first day of the season. Integer.
-    DayEnd (1:365): inclusive last day of the sason. Integer.
+    DayStart (1:365): exclusive first day of the season. Integer, day of the year.
+    DayEnd (1:365): inclusive last day of the sason. Integer, day of the year.
     Type (1:5): season type. 0=Vanilla, 1=Rare Rain, 2=Common Rain, 3=Snow (floor snow can dry out between snowfall periods), 4=Common Snow, 5=Heavy Snow. Integer.
     StartChance (1:100): the chance to start the season weather effect if its not already running (rain or snow). Integer.
     EndChance (1:100): the chance to stop the season weather effect if its already running. Integer.
